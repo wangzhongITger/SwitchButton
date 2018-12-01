@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-public class SwitchView extends LinearLayout implements View.OnClickListener {
+public class SwitchView extends LinearLayout {
     private View mView;
     private Context mContext;
 
@@ -102,7 +102,16 @@ public class SwitchView extends LinearLayout implements View.OnClickListener {
         vOffFlap = mView.findViewById(R.id.v_off_flap);
         frameOn = mView.findViewById(R.id.frame_on);
         frameOff = mView.findViewById(R.id.frame_off);
-        llSwitchButton.setOnClickListener(this);
+        llSwitchButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isPowerOn = !isPowerOn;
+                exchangeSwitchStatus();
+                if (mListener != null) {
+                    mListener.switchStatus(isPowerOn);
+                }
+            }
+        });
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.SwitchView);
         isPowerOn = typedArray.getBoolean(R.styleable.SwitchView_initStatus, false);
@@ -235,16 +244,6 @@ public class SwitchView extends LinearLayout implements View.OnClickListener {
         vOffFlap.setVisibility(!isPowerOn ? VISIBLE : INVISIBLE);
         vOnFlap.setVisibility(!isPowerOn ? INVISIBLE : VISIBLE);
     }
-
-    @Override
-    public void onClick(View v) {
-        isPowerOn = !isPowerOn;
-        exchangeSwitchStatus();
-        if (mListener != null) {
-            mListener.switchStatus(isPowerOn);
-        }
-    }
-
 
     public void setSwitchAble(boolean enable) {
         llSwitchButton.setEnabled(enable);
