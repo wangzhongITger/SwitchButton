@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwitchView">
+        <attr name="initStatus" format="boolean" />
+        <attr name="switchBgColor" format="color|reference" />
+        <attr name="switchOnTextColor" format="color|reference" />
+        <attr name="switchOffTextColor" format="color|reference" />
+        <attr name="switchOnText" format="string|reference" />
+        <attr name="switchOffText" format="string|reference" />
+        <attr name="switchTextSize" format="dimension|reference" />
+        <attr name="switchOnFlapColor" format="color|reference" />
+        <attr name="switchOffFlapColor" format="color|reference" />
+        <attr name="switchMode" format="enum">
+            <enum name="horizontal" value="1" />
+            <enum name="vertical" value="2" />
+        </attr>
+        <attr name="switchCorners" format="dimension|reference" />
+        <attr name="switchStrokeColor" format="color|reference" />
+        <attr name="switchStrokeWidth" format="dimension|reference" />
+        <attr name="isShowText" format="boolean" />
+    </declare-styleable>
+</resources>
