@@ -3,11 +3,6 @@
 
 使用：
 Step 1. Add the JitPack repository to your build file
-
-gradle
-maven
-sbt
-leiningen
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
@@ -15,12 +10,14 @@ Add it in your root build.gradle at the end of repositories:
 			...
 			maven { url 'https://jitpack.io' }
 		}
-	}Copy
+	}
 Step 2. Add the dependency
 
 	dependencies {
 	        implementation 'com.github.wangzhongITger:SwitchButton:1.0.0'
 	}
+
+	
 	
 ![image](https://github.com/wangzhongITger/SwitchButton/blob/master/device-2018-12-01-233108.png)
 
