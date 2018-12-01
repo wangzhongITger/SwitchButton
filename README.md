@@ -43,4 +43,14 @@ switchStrokeColor | 按钮边框颜色
 switchStrokeWidth | 按钮边框宽度 | 如不需要显示边框可以设为0dp
 isShowText | 是否显示文字 | 默认不显示文字
 
+
+
 相关方法
+
+方法 | 作用
+---- | ----
+setSwitchStatusStatusListener(SwitchStatusStatusListener listener) | 设置开关状态的监听
+getSwitchStatus() | 获取当前开关的状态
+setSwitchStatus(boolean isOn) | 设置当前开关的状态
+setSwitchAble(boolean enable) | 设置当前开关是否可控
+
