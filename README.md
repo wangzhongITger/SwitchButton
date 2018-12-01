@@ -1,5 +1,5 @@
 # SwitchButton
-可以竖直开关的SwitchButton
+可以竖直或者横向开关的SwitchButton
 
 使用：
 Step 1. Add the JitPack repository to your build file
@@ -21,3 +21,7 @@ Step 2. Add the dependency
 	dependencies {
 	        implementation 'com.github.wangzhongITger:SwitchButton:1.0.0'
 	}
+	
+
+
+相关属性
